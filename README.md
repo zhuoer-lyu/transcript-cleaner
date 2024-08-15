@@ -18,7 +18,7 @@ This Google Apps Script simplifies processing raw transcripts generated from Zoo
    - Save the project.
 
 3. **Clean the transcript:**
-   - Return to your Google Doc. A new button labeled **Clean Transcript** should appear in the navigation bar (this may take a moment to load).
+   - Return to your Google Doc and refresh. A new button labeled **Clean Transcript** should appear in the navigation bar (this may take a moment to load).
    - **Anonymize speakers:** Click **Clean Transcript** > **Anonymize speakers** and follow the prompts to anonymize speaker names. If this is your first time using Google Apps Script, you’ll need to authorize the script.
    - **Combine chunks:** Click **Clean Transcript** > **Combine chunks** to merge fragmented text chunks from the same speaker. For long transcripts, the script might take some time to run. Wait for the pop-up message "Finished script".
 
