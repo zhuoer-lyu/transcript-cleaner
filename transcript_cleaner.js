@@ -1,4 +1,4 @@
-// This script is used for transcripts from Zoom cloud recordings only.
+// This script is for Zoom cloud recording transcripts only.
 
 // Menu
 function onOpen() {
