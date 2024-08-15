@@ -1,17 +1,28 @@
-### Zoom Cloud Transcript Cleaner
+# Zoom Cloud Transcript Cleaner
 
-This Google Apps Script helps you process raw transcripts generated from Zoom's cloud recordings. It has two functions: **Anonymize Speakers** and **Combine Chunks**. **Anonymize speakers** works exactly like normal find and replace functions. **Combine chunks** identify and combine fragmented chunks of texts of the same speaker.
+This Google Apps Script simplifies processing raw transcripts generated from Zoom's cloud recordings. It offers two key functions: **Anonymize Speakers** and **Combine Chunks**.
 
-### How to use it?
+- **Anonymize Speakers:** Replaces speaker names with anonymous labels, similar to the find and replace function.
+- **Combine Chunks:** Merges fragmented text chunks from the same speaker into a continuous paragraph, preserving only the first timestamp.
 
-1. Have your raw transcript ready (note that it must be a Zoom cloud transcript to work, see example in *example_transcript.vtt* in this repository).
-2. Copy and paste your raw transcript into a new Google Doc.
-3. Click on **Extensions** - **Apps Script** in the Google Doc's navigation bar, and you should see a *Code.gs* file created with an *Untitled project* on the top. Delete the default codes in the codespace.
-4. Open *transcript_cleaner.js* in this repository, copy and paste the codes into *Code.gs* and hit **Save project**.
-5. Go back to your original Google Doc. You should a new button **Clean Transcript** pop up at the end of the navigation bar. It might take some time to load.
-6. Click on **Clean Transcript** - **Anonymize Speakers** and enter texts as instructed by pop-ups to anonymize speakers. If this is the first time you use Google Apps Script, authorization is needed. 
-7. Click on **Clean Transcript** - **Combine Chunks** to combined fragmented chunks of texts. If your transcript is long, the script might take some time to run. Wait until you see the pop-up message "Finished script".
+## How to Use
 
-### Miscellaneous
-1. This script only works for Zoom cloud transcripts which differentiate speakers and reflect that in the raw transcripts. The script takes advantage of that to achieve the **Combine Chunks** function.
-2. This script does not clean up utterances or incorrect identification of speakers, which is common in raw transcripts. Although the script handles most of the manual work, you still need to inspect the transcripts to give them a final touch.
+1. **Prepare Your Transcript:**
+   - Ensure your raw transcript is from a Zoom cloud recording (see *example_transcript.vtt* in this repository for reference).
+   - Copy and paste your raw transcript into a new Google Doc.
+
+2. **Set Up the Script:**
+   - In the Google Doc, navigate to **Extensions** > **Apps Script**.
+   - Delete the default code in the script editor.
+   - Open *transcript_cleaner.js* in this repository, copy its contents, and paste them into the *Code.gs* file in the script editor.
+   - Save the project.
+
+3. **Clean the Transcript:**
+   - Return to your Google Doc. A new button labeled **Clean Transcript** should appear in the navigation bar (this may take a moment to load).
+   - **Anonymize Speakers:** Click **Clean Transcript** > **Anonymize Speakers** and follow the prompts to anonymize speaker names. If this is your first time using Google Apps Script, you’ll need to authorize the script.
+   - **Combine Chunks:** Click **Clean Transcript** > **Combine Chunks** to merge fragmented text chunks from the same speaker. For long transcripts, the script might take some time to run. Wait for the pop-up message "Finished script".
+
+## Important Notes
+
+1. This script is designed specifically for Zoom cloud transcripts, which distinguish between speakers. The **Combine Chunks** function relies on this feature.
+2. The script does not correct speaker misidentification or clean up utterances, which can occur in raw transcripts. A final review is recommended to ensure the accuracy of your transcript.
